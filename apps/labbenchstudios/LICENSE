@@ -1,3 +1,7 @@
+ The following copyright and license information only applies to the source
+ code in the specified directories:
+   1) {project_dir}/apps/labbenchstudios
+ 
  Copyright (c) 2018-2019. Andrew D. King. All Rights Reserved.
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -17,4 +21,7 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
+ 
+ Other licenses may be relevant for other source code and libraries.
+ Please refer to those references for further details.
  
