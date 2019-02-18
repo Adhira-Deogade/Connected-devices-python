@@ -60,30 +60,34 @@ class I2CSenseHatAdaptor(threading.Thread):
         i2cBus.write_byte_data(pressAddr, enableControl, enableMeasure)
         i2cBus.write_byte_data(humidAddr, enableControl, enableMeasure)
         ''' Read '''
-        self.accel = i2cBus.read_i2c_block_data(accelAddr, begAddr, totBytes)
-        self.mag = i2cBus.read_i2c_block_data(magAddr, begAddr, totBytes)
-        self.pres = i2cBus.read_i2c_block_data(pressAddr, begAddr, totBytes)
-        self.humid = i2cBus.read_i2c_block_data(humidAddr,begAddr, totBytes)
+#         self.accel = i2cBus.read_i2c_block_data(accelAddr, begAddr, totBytes)
+#         self.mag = i2cBus.read_i2c_block_data(magAddr, begAddr, totBytes)
+#         self.pres = i2cBus.read_i2c_block_data(pressAddr, begAddr, totBytes)
+#         self.humid = i2cBus.read_i2c_block_data(humidAddr,begAddr, totBytes)
         
     '''
        Methods to display sensor data
     '''
     def displayAccelerometerData(self): 
         print('\t accelerometer:')
+        self.accel = i2cBus.read_i2c_block_data(accelAddr, begAddr, totBytes)
         print(self.accel)
         
     def displayMagnetometerData(self):
             
         print('\t magnetometer:')
+        self.mag = i2cBus.read_i2c_block_data(magAddr, begAddr, totBytes)
         print(self.mag)
     
     def displayPressureData(self):
         print('\t pressure sensor:')
+        self.pres = i2cBus.read_i2c_block_data(pressAddr, begAddr, totBytes)
         print(self.pres)
         
     def displayHumidityData(self):
             
         print('\t humidity sensor:')
+        self.humid = i2cBus.read_i2c_block_data(humidAddr,begAddr, totBytes)
         print(self.humid)
     
     '''

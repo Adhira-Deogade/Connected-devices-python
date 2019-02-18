@@ -1,18 +1,27 @@
+
+
+
 import os
+import json
 from datetime import datetime
+
 class SensorData():
     timeStamp = None
     name = 'This is new temperature report!'
     curValue = 0
-    avgValue = 0
+    avgValue = 10
     minValue = 0
     maxValue = 30
     totValue = 0
     sampleCount = 0
+#     string_data = ''
+#     json_obj_str = ''
+#     dummy_str = ''
+#     string_data_new = ''
     
 
     """
-    Define a timestamp to record the time.
+    Define a time-stamp to record the time.
     """
     
 
@@ -83,7 +92,45 @@ class SensorData():
     def setName(self, name):
         self.name = name
         
+    
+    '''
+    To JSon
+    '''
+    def toJSon(self):
+#      
+        dummy_str = {
+            "name" : self.name,
+            "Current" : self.curValue,
+            "Time" : self.timeStamp,
+            "Average" : self.avgValue,
+            "Sample" : self.sampleCount,
+            "Min" : self.minValue,
+            "Max" : self.maxValue
+            }
+        json_obj_str = dummy_str
+        www = json.dumps(json_obj_str)
+        print("WWW: ",www)
+#         with open('SensorData.txt', 'w') as outfile:
+#             json.dump(json_obj_str, outfile)
+        return www
 
+    
+    '''
+    From JSon
+    '''
+    def fromJSon(self, string_data):
+        my_str = json.loads(string_data)
+        self.curValue = my_str['Current']
+        self.name = my_str['name']
+        self.timeStamp = my_str['Time']
+        self.avgValue = my_str['Average']
+        self.sampleCount = my_str['Sample']
+        self.maxValue = my_str['Max']
+        self.minValue = my_str['Min']
+        print("Current value = ",self.curValue)
+        print("Time = ",self.timeStamp)
+        
+        
     """
     print out all of the information in a format.
     """
@@ -94,3 +141,10 @@ class SensorData():
             str(self.name + ":" + os.linesep + '\tTime:    ' + self.timeStamp +  os.linesep + '\tCurrent: ' + str(self.curValue) + \
             os.linesep + '\tAverage: ' + str(self.avgValue) + os.linesep + '\tSample: ' + str(self.sampleCount) +  os.linesep + '\tMin:     ' + str(self.minValue) + os.linesep + '\tMax:    ' + str(self.maxValue))
         return customStr
+    
+    
+#     def printFromJSon(self):
+#         customStr = \
+#             str(self.name + ":" + os.linesep + '\tTime:    ' + self.timeStamp +  os.linesep + '\tCurrent: ' + str(self.curValue) + \
+#             os.linesep + '\tAverage: ' + str(self.avgValue) + os.linesep + '\tSample: ' + str(self.sampleCount) +  os.linesep + '\tMin:     ' + str(self.minValue) + os.linesep + '\tMax:    ' + str(self.maxValue))
+#         return customStr

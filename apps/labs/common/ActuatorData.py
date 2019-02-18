@@ -1,4 +1,5 @@
 import os
+import json
 from datetime import datetime
 COMMAND_OFF = 0
 COMMAND_ON = 1
@@ -49,13 +50,39 @@ class ActuatorData():
         else:
             self.hasError = False
             
-
+#     def toJSon(self):
+#         return self.string_data
+#     
+#     def fromJSon(self, string_data):
+#         self.string_data = string_data
+#         
+        
+    def tojson(self):
+#      
+        dummy_str = {
+            "Command" : self.command,
+            "Value" : self.val
+            }
+        json_obj_str = dummy_str
+        www = json.dumps(json_obj_str)
+        print("WWW-actuator: ",www)
+        return www
     
+    '''
+    From JSon
+    '''
+    def fromjson(self, string_data):
+        my_str = json.loads(string_data)
+        self.val = my_str['Value']
+        self.command = my_str['Command']
+       
+        print("Value = ",self.val)
+        print("Command = ",self.command)
+   
 
     def setValue(self, val):
         self.val = val
         
-
     def updateData(self, data):
         self.command = data.getCommand()
         self.statusCode = data.getStatusCode()
@@ -63,7 +90,6 @@ class ActuatorData():
         self.stateData = data.getStateData()
         self.val = data.getValue()
             
-
     def updateTimeStamp(self):
         self.timeStamp = str(datetime.now())
     def __str__(self):
@@ -77,4 +103,3 @@ class ActuatorData():
             os.linesep + '\tValue:       ' + str(self.val))
         return customStr
             
-

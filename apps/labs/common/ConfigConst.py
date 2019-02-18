@@ -87,3 +87,4 @@ ENABLE_LOGGING_KEY    = 'enableLogging'
 POLL_CYCLES_KEY       = 'pollCycleSecs'
 
 KEEP_ALIVE_KEY        = 'keepAlive'
+NOMINAL_TEMP_KEY      = 'nominalTemp'

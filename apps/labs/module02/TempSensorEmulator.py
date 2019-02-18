@@ -65,4 +65,4 @@ class module02(threading.Thread):
             sleep(self.rateInSec)
             
             
-            
+    
