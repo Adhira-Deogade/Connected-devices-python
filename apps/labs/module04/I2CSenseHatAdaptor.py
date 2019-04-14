@@ -5,14 +5,14 @@
     Created on 09-Feb-2019
     @author: Adhira
 '''
-import smbus
+import smbus2
 import threading
 from time import sleep
 from labs.common import ConfigUtil
 from labs.common import ConfigConst
 
 ''' Instantiate i2c bus '''
-i2cBus = smbus.SMBus(1)                                                                     # Use I2C bus No.1 on Raspberry Pi3 +
+i2cBus = smbus2.SMBus(1)                                                                     # Use I2C bus No.1 on Raspberry Pi3 +
  
 '''
     Specify addresses for sensors to read data from I2C buffers
