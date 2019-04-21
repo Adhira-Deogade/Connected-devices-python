@@ -22,11 +22,12 @@ import ssl
 from labs.module02 import SmtpClientConnector
 from sense_hat import SenseHat
 '''
-Create pygame object and inmort song for starting music as alarm
+Create pygame object and import song for starting music as alarm
+Commenting
 '''
-import pygame
-pygame.mixer.init()
-pygame.mixer.music.load("song.mp3")
+#import pygame
+# pygame.mixer.init()
+# pygame.mixer.music.load("song.mp3")
 
 '''
 Import sensor data object to send sensor data information to email
@@ -170,9 +171,9 @@ def main():
             print("Message sent.!")
             
         ''' Turn the speaker ON and start playing music'''
-        pygame.mixer.music.play()
-        time.sleep(10)
-        pygame.mixer.music.pause()
+#         pygame.mixer.music.play()
+#         time.sleep(10)
+#         pygame.mixer.music.pause()
     
         ''' Create payload by dumping sensor data information in json object and publish'''
         payload = json.dumps({"Temperature": tempData,
