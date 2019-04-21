@@ -8,7 +8,9 @@ from datetime import datetime
 class SensorData():
     timeStamp = None
     name = 'This is new temperature report!'
-    curValue = 0
+    tempValue = 0
+    pressureValue = 0
+    humidityValue = 0
     avgValue = 10
     minValue = 0
     maxValue = 30
@@ -35,15 +37,17 @@ class SensorData():
     """    
         
 
-    def addValue(self, newVal):
+    def addValue(self, temp, press, humid):
         self.sampleCount += 1
         self.timeStamp = str(datetime.now())
-        self.curValue = newVal
-        self.totValue += newVal
-        if(self.curValue < self.minValue):
-            self.minValue = self.curValue
-        if(self.curValue > self.maxValue):
-            self.maxValue = self.curValue
+        self.tempValue = temp
+        self.pressureValue = press
+        self.humidityValue = humid
+        self.totValue += temp
+        if(self.tempValue < self.minValue):
+            self.minValue = self.tempValue
+        if(self.tempValue > self.maxValue):
+            self.maxValue = self.tempValue
         if(self.totValue != 0 and self.sampleCount > 0):
             self.avgValue = self.totValue / self.sampleCount
       
@@ -138,8 +142,11 @@ class SensorData():
 
     def __str__(self):
         customStr = \
-            str(self.name + ":" + os.linesep + '\tTime:    ' + self.timeStamp +  os.linesep + '\tCurrent: ' + str(self.curValue) + \
-            os.linesep + '\tAverage: ' + str(self.avgValue) + os.linesep + '\tSample: ' + str(self.sampleCount) +  os.linesep + '\tMin:     ' + str(self.minValue) + os.linesep + '\tMax:    ' + str(self.maxValue))
+            str(self.name + ":" + \
+                os.linesep + '\tTime:    ' + self.timeStamp +  os.linesep + '\tCurrentTemp: ' + str(self.tempValue) + \
+                os.linesep + '\tCurrent pressure: ' + str(self.pressureValue) + \
+                os.linesep + '\tCurrent humidity: ' + str(self.humidityValue) + \
+                os.linesep + '\tAverage: ' + str(self.avgValue) + os.linesep + '\tSample: ' + str(self.sampleCount))
         return customStr
     
     

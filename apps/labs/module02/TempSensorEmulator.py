@@ -7,10 +7,11 @@ Created on 02-Feb-2019
 # Import libraries
 import random 
 from time import sleep
-from threading import Thread
+# from threading import Thread
+import threading
 from labs.common import SensorData
 from labs.module02 import SmtpClientConnector
-from test.test_enum import threading
+# from test.test_enum import threading
 
 ## Define thread class
 class module02(threading.Thread):

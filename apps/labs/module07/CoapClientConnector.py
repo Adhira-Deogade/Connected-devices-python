@@ -99,7 +99,7 @@ class CoapClientConnector():
         print("Testing DELETE for resource: " + resource + " payload: " + payload);
         self.__init__();
         
-        response = self.client.delete(resource, payload);
+        response = self.client.delete(resource);
         if response:
             print("Response from DELETE is: " + response.pretty_print());
         else:
@@ -115,8 +115,8 @@ def main(self):
     CoapClientConnector().HandleDELETETest("Test", "23");
         
     
-if __name__ == '__main__':
-        main()
+# if __name__ == '__main__':
+#         main()
 #             
             
             
