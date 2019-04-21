@@ -14,7 +14,7 @@ Change address to Rpi module directory
 '''
 import sys
 sys.path.insert(0,'/home/pi/workspace/iot-device/connected-devices-python/apps')
-import random
+
 import paho.mqtt.client as mqttClient
 import time
 import json

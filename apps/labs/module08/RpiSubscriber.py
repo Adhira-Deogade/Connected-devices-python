@@ -6,7 +6,7 @@ Created on 20-Apr-2019
 '''
 Change address to Rpi module directory
 '''
-import sys,os
+import sys
 sys.path.insert(0,'/home/pi/workspace/iot-device/connected-devices-python/apps')
 import paho.mqtt.client as mqtt
 from sense_hat import SenseHat
