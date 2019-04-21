@@ -8,7 +8,7 @@ from labs.common import ConfigUtil
 from labs.common import ConfigConst
 from labs.common import SensorData
 
-
+''' Create variables '''
 client = None;
 sensor = SensorData.SensorData();
 
@@ -60,7 +60,10 @@ class CoapClientConnector():
 #         except Exception:
 #             print("Failed to create coap helper client reference using host: "+self.host);
 #             pass
-    
+    '''
+    Method to handle GET requests
+    @param: resource: Name of topic
+    '''
     def HandleGETTest(self, resource):
         print("GET method");
         print("Testing GET for resources: " + str(resource));
@@ -72,7 +75,12 @@ class CoapClientConnector():
         else:
             print("No response received for GET using the resources: " + resource);
         self.client.stop();
-        
+    
+    '''
+    Method to handle POST requests
+    @param: resource: Name of topic
+    @param: payload: Data sent in topic
+    '''    
     def HandlePOSTTest(self, resource, payload):
         print("Testing POST for resource: " + resource + " payload: " + payload);
         self.__init__();
@@ -83,7 +91,12 @@ class CoapClientConnector():
         else:
             print("No response received for POST using the resources: " + resource);
         self.client.stop();
-        
+    
+    '''
+    Method to handle PUT requests
+    @param: resource: Name of topic
+    @param: payload: Data sent in topic
+    '''    
     def HandlePUTTest(self, resource, payload):
         print("Testing PUT for resource: " + resource + " payload: " + payload);
         self.__init__();
@@ -95,6 +108,11 @@ class CoapClientConnector():
             print("No response received for PUT using the resources: " + resource);
         self.client.stop();
     
+    '''
+    Method to handle DELETE requests
+    @param: resource: Name of topic
+    @param: payload: Data sent in topic
+    '''
     def HandleDELETETest(self, resource, payload):
         print("Testing DELETE for resource: " + resource + " payload: " + payload);
         self.__init__();
@@ -106,7 +124,9 @@ class CoapClientConnector():
             print("No response received for DELETE using the resources: " + resource);
         self.client.stop();
         
-        
+'''
+Calling requests methods
+'''
 def main(self):
     
     CoapClientConnector().HandleGETTest("Test");
