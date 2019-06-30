@@ -26,4 +26,4 @@ python3 SystemPerformanceApp.py
 >         inactive=161665024, buffers=34848768, cached=200007680, shared=18145280, slab=14200832)
 
 ## Diagram representation:
-
+![alt text](apps/labs/module01/Module1.jpg)
