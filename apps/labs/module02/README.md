@@ -10,6 +10,7 @@ Summary: The app will perform processing of basic data from an IoT device sensor
 
 #### Diagram represntation:
 ![alt text](https://github.com/Adhira-Deogade/cd-github-python/blob/master/apps/labs/module02/Module2.png)
+____
 
 #### How to run the app:
 ```
