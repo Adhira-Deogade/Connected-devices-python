@@ -19,14 +19,14 @@ python3 TempSimulatorApp.py
 ```
 
 #### Steps:
-1. Create *_[Configuration.props](https://github.com/Adhira-Deogade/cd-github-python/blob/master/config/ConnectedDevicesConfig.props)_* to specify email addresses to send from and receive from and host
-2. Create [TempSensorAdaptor](apps/labs/module03/TempSensorAdaptor.py) to specify the conditions on temperature monitoring data that will initiate alert and send email
+1. Specify email addresses to send from and receive from and host in *_[Configuration.props](https://github.com/Adhira-Deogade/cd-github-python/blob/master/config/ConnectedDevicesConfig.props)_*
+2. Specify the conditions on temperature monitoring data that will initiate alert and send email in [TempSensorAdaptor](apps/labs/module03/TempSensorAdaptor.py)
 3. Generate random temperature values periodically in [TempSensorEmulator](apps/labs/module02/TempSensorEmulator.py)
-4. Create [SMTP server](apps/labs/module02/SmtpClientConnector.py) from email and host conifgurations to send email alerts.
-5. Create [SensorData](apps/labs/common/SensorData.py) to specify data processing functions.
-6. Create [ConfigUtil](apps/labs/common/ConfigUtil.py) where we specify getters and setters for configuration parameters.
-7. Create [ConfigConst](apps/labs/common/ConfigConst.py) which is a replica of environment variables, looking up default configuration values
-8. Create [ActuatorData](apps/labs/common/ActuatorData.py) to update and diplay data processing conditions and alert message for email.
+4. Configure email and host for email alerts in [SMTP server](apps/labs/module02/SmtpClientConnector.py)
+5. Specify data processing functions in [SensorData](apps/labs/common/SensorData.py)
+6. Specify getters and setters for configuration parameters in [ConfigUtil](apps/labs/common/ConfigUtil.py)
+7. Set up environment variables, to look up default configuration values in [ConfigConst](apps/labs/common/ConfigConst.py)
+8. Update and diplay data processing conditions and alert message for email in [ActuatorData](apps/labs/common/ActuatorData.py)
 
 #### Sample output:
 ###### 1. Data processing updates:
