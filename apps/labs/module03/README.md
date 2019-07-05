@@ -20,10 +20,10 @@ ___
 
 #### How to run the app:
 1. On RaspberryPi:
-  a. Create a sub-directory under /home/pi named ‘workspace’ (/home/pi/workspace)
-  b. Power off the Pi, plug the SenseHAT into the GPIO (correctly!), and power the Pi back on
-  c. Access your Raspberry Pi via the same network your laptop / workstation is on and you know it’s IP / hostname
-  d. Install the SenseHAT python package on the Raspberry Pi
+ a. Create a sub-directory under /home/pi named ‘workspace’ (/home/pi/workspace)
+ b. Power off the Pi, plug the SenseHAT into the GPIO (correctly!), and power the Pi back on
+ c. Access your Raspberry Pi via the same network your laptop / workstation is on and you know it’s IP / hostname
+ d. Install the SenseHAT python package on the Raspberry Pi
   ```
   sudo apt-get install python3
   sudo apt-get install python3-pip
@@ -36,9 +36,7 @@ ___
     i. ```tar -xvf iot-device-sw.tar```
     ii. If you have GPIO configured and a SenseHAT installed, delete the proxy / shadow files:
     ``` rm -rf Connected-devices-python/apps/sense_hat.py Connected-devices-python/apps/RPi/GPIO.py```
-  g. ```python
-  python3 TempManagementApp.py
-  ```
+  g. ```python3 TempManagementApp.py```
   
 
 #### Steps:
