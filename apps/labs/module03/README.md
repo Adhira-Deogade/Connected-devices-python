@@ -20,12 +20,10 @@ ___
 
 #### How to run the app:
 1. On RaspberryPi:
-    a. Create a sub-directory under /home/pi named ‘workspace’ (/home/pi/workspace).
-    b. Power off the Pi, plug the SenseHAT into the GPIO (correctly!), and power the Pi back on.
- a. 
- b. 
- c. Access your Raspberry Pi via the same network your laptop / workstation is on and you know it’s IP / hostname
- d. Install the SenseHAT python package on the Raspberry Pi
+  - Create a sub-directory under /home/pi named ‘workspace’ (/home/pi/workspace)
+  - Power off the Pi, plug the SenseHAT into the GPIO (correctly!), and power the Pi back on
+  - Access your Raspberry Pi via the same network your laptop / workstation is on and you know it’s IP / hostname
+  - Install the SenseHAT python package on the Raspberry Pi
   ```
   sudo apt-get install python3
   sudo apt-get install python3-pip
@@ -42,6 +40,6 @@ ___
   
 
 #### Steps:
-1. In the [config](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/config/ConnectedDevicesConfig.props) file, add ```nominalTemp = 20``` to the [device] section.
+1. In the [config file](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/config/ConnectedDevicesConfig.props), add ```nominalTemp = 20``` to the [device] section.
 2. 
 Initialize sense hat sensor and set the orientation. Continuously obtain at defined rate to display on sense hat.
