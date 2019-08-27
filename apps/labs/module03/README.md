@@ -29,17 +29,25 @@ ___
       sudo apt-get install python3-pip
       pip3 install sense-hat
       ```
-    - On your workstation:
-      - Create tar file of this folder ```tar -cvf iot-device-sw.tar Connected-devices-python/```
-      - ```scp iot-device-sw.zip pi@{your hostname or ip address}:/home/pi/workspace```
-    - On your RaspberryPi:
-      - ```tar -xvf iot-device-sw.tar```
-      - If you have GPIO configured and a SenseHAT installed, delete the proxy / shadow files:
-        ``` rm -rf Connected-devices-python/apps/sense_hat.py Connected-devices-python/apps/RPi/GPIO.py```
-    - ```python3 TempManagementApp.py```
+2. On your workstation:
+  - Create tar file of this folder ```tar -cvf iot-device-sw.tar Connected-devices-python/```
+  - ```scp iot-device-sw.zip pi@{your hostname or ip address}:/home/pi/workspace```
+3. On your RaspberryPi:
+  - ```tar -xvf iot-device-sw.tar```
+  - If you have GPIO configured and a SenseHAT installed, delete the proxy / shadow files:
+    ``` rm -rf Connected-devices-python/apps/sense_hat.py Connected-devices-python/apps/RPi/GPIO.py```
+  - ```python3 TempManagementApp.py```
   
 
 #### Steps:
 1. In the [config file](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/config/ConnectedDevicesConfig.props), add ```nominalTemp = 20``` to the [device] section.
-2. 
+2. In the [LED-activator file](apps/labs/module03/SenseHatLedActivator.py), craete following:
+  - **Constructor** to initialize sense hat sensor and set its orientation
+  - **Thread** to continuously obtain data form sensors
+  - **Rate** at which data should be obtained (period)
+  - **Switch** sensors ON and OFF
+  - **Message** to display defined message on LED
+3. In [actuator-emulator](apps/labs/module03/TempActuatorEmulator.py), define follwoing:
+  - **Construct** actuator data and LED-activator
+  - **Process message** 
 Initialize sense hat sensor and set the orientation. Continuously obtain at defined rate to display on sense hat.
