@@ -1,5 +1,5 @@
 # Read system performace - python
-An app that will read basic system performance data from the device
+#### An app that will read basic system performance data from the device
 
 ## [System performance adaptor](apps/labs/module01/SystemPerformanceAdaptor.py)
 #### Tasks:
