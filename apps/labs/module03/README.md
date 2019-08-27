@@ -30,13 +30,13 @@ ___
       pip3 install sense-hat
       ```
 2. On your workstation:
-  - Create tar file of this folder ```tar -cvf iot-device-sw.tar Connected-devices-python/```
-  - ```scp iot-device-sw.zip pi@{your hostname or ip address}:/home/pi/workspace```
+    - Create tar file of this folder ```tar -cvf iot-device-sw.tar Connected-devices-python/```
+    - Send file to RPi ```scp iot-device-sw.zip pi@{your hostname or ip address}:/home/pi/workspace```
 3. On your RaspberryPi:
-  - ```tar -xvf iot-device-sw.tar```
-  - If you have GPIO configured and a SenseHAT installed, delete the proxy / shadow files:
-    ``` rm -rf Connected-devices-python/apps/sense_hat.py Connected-devices-python/apps/RPi/GPIO.py```
-  - ```python3 TempManagementApp.py```
+    - Unzip tar file ```tar -xvf iot-device-sw.tar```
+    - If you have GPIO configured and a SenseHAT installed, delete the proxy / shadow files:
+      ``` rm -rf Connected-devices-python/apps/sense_hat.py Connected-devices-python/apps/RPi/GPIO.py```
+    - Run the app ```python3 TempManagementApp.py```
   
 
 #### Steps:
