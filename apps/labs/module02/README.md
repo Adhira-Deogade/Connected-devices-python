@@ -19,7 +19,7 @@ python3 TempSimulatorApp.py
 ```
 
 #### Steps:
-1. Specify email addresses to send from and receive from and host in *_[Configuration.props](https://github.com/Adhira-Deogade/cd-github-python/blob/master/config/ConnectedDevicesConfig.props)_*
+1. Specify email addresses of sender, receiver and host in *_[Configuration.props](https://github.com/Adhira-Deogade/cd-github-python/blob/master/config/ConnectedDevicesConfig.props)_*
 2. Specify the conditions on temperature monitoring data that will initiate alert and send email in [TempSensorAdaptor](apps/labs/module03/TempSensorAdaptor.py)
 3. Generate random temperature values periodically in [TempSensorEmulator](apps/labs/module02/TempSensorEmulator.py)
 4. Configure email and host for email alerts in [SMTP server](apps/labs/module02/SmtpClientConnector.py)
