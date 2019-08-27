@@ -24,13 +24,13 @@ ___
     - Power off the Pi, plug the SenseHAT into the GPIO (correctly!), and power the Pi back on
     - Access your Raspberry Pi via the same network your laptop / workstation is on and you know it’s IP / hostname
     - Install the SenseHAT python package on the Raspberry Pi
-  ```
-  sudo apt-get install python3
-  sudo apt-get install python3-pip
-  pip3 install sense-hat
-  ```
-  e. On your workstation:
-    i. Create tar file of this folder ```tar -cvf iot-device-sw.tar Connected-devices-python/```
+    ```
+    sudo apt-get install python3
+    sudo apt-get install python3-pip
+    pip3 install sense-hat
+    ```
+    - On your workstation:
+      - Create tar file of this folder ```tar -cvf iot-device-sw.tar Connected-devices-python/```
     ii. ```scp iot-device-sw.zip pi@{your hostname or ip address}:/home/pi/workspace```
   f. On your RaspberryPi:
     i. ```tar -xvf iot-device-sw.tar```
