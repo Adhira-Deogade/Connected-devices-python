@@ -9,8 +9,8 @@ Summary: The app will process data from an IoT sensor (e.g: Camera, GPIO-based s
 #### Fucntioning: 
 1. Read communication configuration data from file
 2. Read data from RaspberryPi - SenseHAT module
-3. Send sensor data to both **_the SMTP client_**, and to **_thermostat_** actuator adaptor
-4. Parse sensor data and signal actuator to adjust temperature (**_up_** if temperature dropped, **_down_** if rose)
+3. Send sensor data to both **SMTP client**, and to **thermostat** actuator adaptor
+4. Parse sensor data and signal actuator to adjust temperature (**up** if temperature dropped, **down** if rose)
 5. Update SenseHAT LED’s to display a relevant message (here **R**) indicating temp was updated
 
 
@@ -20,10 +20,10 @@ ___
 
 #### How to run the app:
 1. On RaspberryPi:
-    a. 
-    b. 
- a. Create a sub-directory under /home/pi named ‘workspace’ (/home/pi/workspace)
- b. Power off the Pi, plug the SenseHAT into the GPIO (correctly!), and power the Pi back on
+    a. Create a sub-directory under /home/pi named ‘workspace’ (/home/pi/workspace).
+    b. Power off the Pi, plug the SenseHAT into the GPIO (correctly!), and power the Pi back on.
+ a. 
+ b. 
  c. Access your Raspberry Pi via the same network your laptop / workstation is on and you know it’s IP / hostname
  d. Install the SenseHAT python package on the Raspberry Pi
   ```
