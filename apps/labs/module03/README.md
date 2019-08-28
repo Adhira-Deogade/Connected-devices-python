@@ -74,13 +74,13 @@ ___
 ___
 
 #### Application log output:
-![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module03/Screenshot 2019-02-09 at 2.33.29 PM.png)
+![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module03/AppLogOp3.png)
 ___
 
 #### Email
-![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module03/Screenshot 2019-02-09 at 6.21.20 PM.png)
+![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module03/Email3.png)
 ___
 
 #### Sensor information:
-![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module03/Screenshot 2019-02-09 at 2.33.29 PM.png)
+![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module03/sensorReadings.png)
 ___
