@@ -68,7 +68,7 @@ ___
       - Invoke function to send message to LEDs on SenseHat
 
 5. Finally, in the app, define and run the thread to start the above mentioned **sensor-adaptor**
-
+___
 #### Sample output:
 ![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module03/SenseHatOutput.jpg)
 ___
