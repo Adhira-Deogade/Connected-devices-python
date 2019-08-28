@@ -41,13 +41,46 @@ ___
 
 #### Steps:
 1. In the [config file](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/config/ConnectedDevicesConfig.props), add ```nominalTemp = 20``` to the [device] section.
+
 2. In the [LED-activator file](apps/labs/module03/SenseHatLedActivator.py), craete following:
-  - **Constructor** to initialize sense hat sensor and set its orientation
-  - **Thread** to continuously obtain data form sensors
-  - **Rate** at which data should be obtained (period)
-  - **Switch** sensors ON and OFF
-  - **Message** to display defined message on LED
+    - **Constructor** to initialize sense hat sensor and set its orientation
+    - **Thread** to continuously obtain data form sensors
+    - **Rate** at which data should be obtained (period)
+    - **Switch** sensors ON and OFF
+    - **Message** to display defined message on LED
+
 3. In [actuator-emulator](apps/labs/module03/TempActuatorEmulator.py), define follwoing:
-  - **Construct** actuator data and LED-activator
-  - **Process message** 
-Initialize sense hat sensor and set the orientation. Continuously obtain at defined rate to display on sense hat.
+    - **Construct** actuator data and LED-activator
+    - **Process message** will perform follwoing functions in sequence:
+      - enable LED, 
+      - run thread to read from sensors, 
+      - update actutator data file,
+      - read temperature data from actuator-data file
+      - based on condition, compose message to be diplayed (low or high)
+      - Send message to LED display
+
+4. In [sensor-adptor](apps/labs/module03/TempSensorAdaptor.py):
+    - Instantiate data files as objetcs
+    - **Thread** to run the following steps:
+      - obtain temperature value from SenseHat module
+      - parse initial actuator-data file to read current, min and max temp values
+      - calculate difference in temp value, set condition for creating alert
+      - Invoke function to send message to LEDs on SenseHat
+
+5. Finally, in the app, define and run the thread to start the above mentioned **sensor-adaptor**
+
+#### Sample output:
+![alt text](apps/labs/module03/SenseHatOutput.jpg)
+___
+
+#### Application log output:
+![alt text](apps/labs/module03/Screenshot 2019-02-09 at 2.33.29 PM.png)
+___
+
+#### Email
+![alt text](apps/labs/module03/Screenshot 2019-02-09 at 6.21.20 PM.png)
+___
+
+#### Sensor information:
+![alt text](apps/labs/module03/Screenshot 2019-02-09 at 2.33.29 PM.png)
+___
