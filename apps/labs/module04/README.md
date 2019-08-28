@@ -4,7 +4,7 @@
 Summary: The app will interact with various sensors connected to RPi's GPIO with I2C protocol, SenseHat and python libraries. It will read data from SenseHAT sensor module and display it on SenseHAT LEDs.
 
 #### Diagram representation:
-![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module04/I2CSenseHatAdaptor.py)
+![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module04/Module4.png)
 ___
 
 #### How to run the app:
