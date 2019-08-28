@@ -42,7 +42,7 @@ ___
 #### Steps:
 1. In the [config file](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/config/ConnectedDevicesConfig.props), add ```nominalTemp = 20``` to the [device] section.
 
-2. In the [LED-activator file](apps/labs/module03/SenseHatLedActivator.py), craete following:
+2. In the [LED-activator file](apps/labs/module03/SenseHatLedActivator.py), create following:
     - **Constructor** to initialize sense hat sensor and set its orientation
     - **Thread** to continuously obtain data form sensors
     - **Rate** at which data should be obtained (period)
@@ -70,17 +70,17 @@ ___
 5. Finally, in the app, define and run the thread to start the above mentioned **sensor-adaptor**
 
 #### Sample output:
-![alt text](apps/labs/module03/SenseHatOutput.jpg)
+![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module03/SenseHatOutput.jpg)
 ___
 
 #### Application log output:
-![alt text](apps/labs/module03/Screenshot 2019-02-09 at 2.33.29 PM.png)
+![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module03/Screenshot 2019-02-09 at 2.33.29 PM.png)
 ___
 
 #### Email
-![alt text](apps/labs/module03/Screenshot 2019-02-09 at 6.21.20 PM.png)
+![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module03/Screenshot 2019-02-09 at 6.21.20 PM.png)
 ___
 
 #### Sensor information:
-![alt text](apps/labs/module03/Screenshot 2019-02-09 at 2.33.29 PM.png)
+![alt text](https://github.com/Adhira-Deogade/Connected-devices-python/blob/master/apps/labs/module03/Screenshot 2019-02-09 at 2.33.29 PM.png)
 ___
