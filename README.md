@@ -3,6 +3,7 @@ ____
 # Connected Devices - Python
 
 Connected Devices - Python repository.
+#### [Presentation](https://bit.ly/34nojhU)
 
 #### [Module 01](https://github.com/Adhira-Deogade/cd-github-python/tree/master/apps/labs/module01) - System performance monitoring
 An app that will read basic system performance data from the device
